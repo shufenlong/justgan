@@ -21,8 +21,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    Hello，welcome learn Spring MVC,the message is ${message }
-    <%=request.getAttribute("message") %>
-    测试user对象:${user.userName }
+    Hello，welcome learn Spring MVC,the message is fuck U!
+ 
   </body>
 </html>
