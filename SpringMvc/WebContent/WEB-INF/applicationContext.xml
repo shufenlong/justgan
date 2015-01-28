@@ -80,6 +80,8 @@
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceOperation" />
 	</aop:config>
   -->
+  <context:annotation-config />
+  <aop:aspectj-autoproxy /> 
 	<!-- 自动加载构建bean -->
-	<context:component-scan base-package="com.quanfen" />
+	<context:component-scan base-package="com.quanfeng" />
 </beans>

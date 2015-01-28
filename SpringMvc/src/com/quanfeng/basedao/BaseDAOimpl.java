@@ -3,14 +3,17 @@ package com.quanfeng.basedao;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-@Repository("baseDAO")  
-@SuppressWarnings("all")
+  
+@Repository("baseDAO")
 public class BaseDAOimpl<T> implements BaseDAO<T> {
+	@Resource
 	private SessionFactory sessionFactory;
 
 	public SessionFactory getSessionFactory() {
@@ -18,7 +21,7 @@ public class BaseDAOimpl<T> implements BaseDAO<T> {
 	}
 
 	private Session getCurrentSession() {
-		return sessionFactory.getCurrentSession();
+		return sessionFactory.openSession();
 	}
 
 	@Autowired

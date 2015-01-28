@@ -22,7 +22,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         
         
-        <mapping class="com.quanfen.entity.User" />
+        <mapping class="com.quanfeng.entity.User" />
     </session-factory>  
     
     
