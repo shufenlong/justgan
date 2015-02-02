@@ -34,7 +34,9 @@ public class UserServiceImpl implements UserService {
    public void deleteUser(User user) {  
        baseDAO.delete(user);  
    }  
- 
+
+   
+   
    @Override  
    public List<User> findAllList() {  
        return baseDAO.find(" from User u");  

@@ -21,10 +21,19 @@ public class User {
 
 	private String status;
 
+	private String sex;
+	
+	private boolean enabled;
+	@Column(name="sex",length = 1)
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
 	public User(){
 		
 	}
-	
 	public User(String username, String password, String status) {
 		// TODO Auto-generated constructor stub
 		this.username = username;
